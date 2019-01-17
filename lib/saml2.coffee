@@ -74,7 +74,7 @@ create_metadata = (entity_id, assert_endpoint, signing_certificates, encryption_
       '@entityID': entity_id
       '@validUntil': (new Date(Date.now() + 1000 * 60 * 60)).toISOString()
       'md:SPSSODescriptor': []
-        .concat {'@protocolSupportEnumeration': 'urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol'}
+        .concat {'@protocolSupportEnumeration': 'urn:oasis:names:tc:SAML:2.0:protocol'}
         .concat signing_cert_descriptors
         .concat encryption_cert_descriptors
         .concat [
